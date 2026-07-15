@@ -88,7 +88,9 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="1" Content="로그인" Style="{StaticResource PrimaryButton}" Click="LoginButton_Click" />
+                <Button x:Name="LoginButton" Grid.Column="1" Content="로그인" Style="{StaticResource PrimaryButton}" Click="LoginButton_Click" Cursor="Hand"
+                        IsDefault="True"
+                        />
             </Grid>
         </Grid>
     </Border>

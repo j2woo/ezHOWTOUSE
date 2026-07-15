@@ -1,6 +1,7 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Windows;
+using System.Windows.Input;
 
 namespace HOWTOUSE
 {
@@ -65,8 +66,8 @@ namespace HOWTOUSE
             const string query = @"
             SELECT EMP_NO, USER_NM
                 FROM CNLRRUSD
-                WHERE EMP_NO = @EMP_NO
-                AND PASSWORD = @PASSWORD
+                WHERE STF_NO = @EMP_NO
+                AND LGIN_PWD = @PASSWORD
                 LIMIT 1";
 
             using (MySqlConnection connection = new MySqlConnection(AppSettings.Current.Database.ConnectionString))
