@@ -109,6 +109,8 @@ namespace HOWTOUSE
         {
             string displayName = string.IsNullOrWhiteSpace(userName) ? employeeNo : userName;
 
+            LoginSession.SetUser(employeeNo, userName);
+
             isLoggedIn = true;
             LoginUserNameTextBlock.Text = displayName;
             LoginUserRoleTextBlock.Text = employeeNo;
